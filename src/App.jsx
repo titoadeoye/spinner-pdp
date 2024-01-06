@@ -28,11 +28,5 @@ const App = () => {
     </div>
   );
 };
-{
-  /* <Router>
-          <Routes>
-            <Route path="products/:id" element={<PDPContent />} />
-          </Routes>
-        </Router>  */
-}
+
 root.render(<App />);
