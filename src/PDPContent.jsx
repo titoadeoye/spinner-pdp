@@ -1,25 +1,26 @@
-import { getProductById, currency } from "home/products";
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
+
+import { getProductById, currency } from "home/products";
 import placeAddToCart from "addtocart/placeAddToCart";
 
 export default function PDPContent() {
   const { id } = useParams();
-  const [product, setProduct] = useState({});
-
-  const addToCart = useRef(null);
+  const [product, setProduct] = useState(null);
 
   useEffect(() => {
     if (id) {
-      getProductById(id)?.then(setProduct);
+      getProductById(id).then(setProduct);
     } else {
       setProduct(null);
     }
   }, [id]);
 
+  const addToCart = useRef(null);
+
   useEffect(() => {
-    if(addToCart.current) {
-      placeAddToCart(addToCart.current, product.id)
+    if (addToCart.current) {
+      placeAddToCart(addToCart.current, product.id);
     }
   }, [product]);
 
