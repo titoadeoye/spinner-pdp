@@ -1,7 +1,7 @@
-# Spinner app (cart)
+# Spinner app (pdp)
 This repository contains the source code for Spinner App.
 
-The spinner app is an e-commerce app that sells spinners. It is built with a microservices architecture using Module Federation. This micro application displays the product description page of the spinner e-commerce app.
+The spinner app is an e-commerce app that sells spinners. It is built with a microservices architecture using Module Federation. This micro application displays the product description page(pdp) of the spinner e-commerce app.
 
 ### Project Status
 Completed
